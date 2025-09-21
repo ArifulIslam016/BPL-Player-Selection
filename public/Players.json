@@ -1,0 +1,122 @@
+[
+  {
+    "image": "https://i.ibb.co.com/B5hVzDfY/Shakib-Al-Hasan.jpg",
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "rating": 9.5,
+    "battingStyle": "Left-Hand Bat",
+    "bowlingStyle": "Slow Left-Arm Orthodox",
+    "price": "150,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/8DNpvGcz/Tamim-Iqbal.jpg",
+    "name": "Tamim Iqbal",
+    "country": "Bangladesh",
+    "role": "Batsman",
+    "rating": 8.9,
+    "battingStyle": "Left-Hand Bat",
+    "bowlingStyle": "Right-Arm Offbreak",
+    "price": "120,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/LDmnh4f2/download.jpg",
+    "name": "Mushfiqur Rahim",
+    "country": "Bangladesh",
+    "role": "Wicketkeeper-Batsman",
+    "rating": 9.0,
+    "battingStyle": "Right-Hand Bat",
+    "bowlingStyle": "—",
+    "price": "110,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/hbYKxVK/Mahmudullah-Riyad.jpg",
+    "name": "Mahmudullah Riyad",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "rating": 8.7,
+    "battingStyle": "Right-Hand Bat",
+    "bowlingStyle": "Right-Arm Offbreak",
+    "price": "100,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/gbdFyq33/Mustafizur-Rahman.jpg",
+    "name": "Mustafizur Rahman",
+    "country": "Bangladesh",
+    "role": "Bowler",
+    "rating": 9.2,
+    "battingStyle": "Left-Hand Bat",
+    "bowlingStyle": "Left-Arm Fast Medium",
+    "price": "140,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/JFvxf91B/Afif-Hossain.jpg",
+    "name": "Afif Hossain",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "rating": 8.3,
+    "battingStyle": "Left-Hand Bat",
+    "bowlingStyle": "Right-Arm Offbreak",
+    "price": "80,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/JWJVWVG9/Mahedi-Hasan.webp",
+    "name": "Mahedi Hasan",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "rating": 8.1,
+    "battingStyle": "Right-Hand Bat",
+    "bowlingStyle": "Right-Arm Offbreak",
+    "price": "75,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/992tJprj/Taskin-Ahmed.jpg",
+    "name": "Taskin Ahmed",
+    "country": "Bangladesh",
+    "role": "Bowler",
+    "rating": 8.8,
+    "battingStyle": "Right-Hand Bat",
+    "bowlingStyle": "Right-Arm Fast",
+    "price": "95,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/GqmFJwS/Liton-Das.jpg",
+    "name": "Liton Das",
+    "country": "Bangladesh",
+    "role": "Wicketkeeper-Batsman",
+    "rating": 8.6,
+    "battingStyle": "Right-Hand Bat",
+    "bowlingStyle": "—",
+    "price": "90,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/S44MBxts/Nurul-Hasan-Sohan.jpg",
+    "name": "Nurul Hasan Sohan",
+    "country": "Bangladesh",
+    "role": "Wicketkeeper-Batsman",
+    "rating": 7.9,
+    "battingStyle": "Right-Hand Bat",
+    "bowlingStyle": "—",
+    "price": "70,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/Hs4Zmfc/Ebadot-Hossain.jpg",
+    "name": "Ebadot Hossain",
+    "country": "Bangladesh",
+    "role": "Bowler",
+    "rating": 7.8,
+    "battingStyle": "Right-Hand Bat",
+    "bowlingStyle": "Right-Arm Fast Medium",
+    "price": "65,000 USD"
+  },
+  {
+    "image": "https://i.ibb.co.com/tw7wqrNk/Nasir-Hossain.jpg",
+    "name": "Nasir Hossain",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "rating": 7.5,
+    "battingStyle": "Right-Hand Bat",
+    "bowlingStyle": "Right-Arm Offbreak",
+    "price": "60,000 USD"
+  }
+]
