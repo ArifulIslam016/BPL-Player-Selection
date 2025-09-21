@@ -2,8 +2,7 @@
 import curnencyImg from "../../assets/Currency.png";
 import logoImg from "../../assets/logo.png";
 
-const Navbar = () => {
-   
+const Navbar = ({ availableBanlance }) => {
   return (
     <>
       <div className="navbar max-w-[1280px] mx-auto pt-4">
@@ -14,7 +13,7 @@ const Navbar = () => {
         </div>
         <div className="flex-none">
           <button className="btn ">
-            <span>6000000000 </span> <span> Coin</span>
+            <span>{availableBanlance}</span> <span> Coin</span>
             <img src={curnencyImg} alt="" />
           </button>
         </div>

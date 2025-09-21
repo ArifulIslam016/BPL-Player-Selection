@@ -1,61 +1,20 @@
 import React, { use } from "react";
-import profileImg from "../../assets/profile.png";
-import CountryFlagImg from "../../assets/CountryFlag.png";
 
-const AvailablePlayer = ({ playerPromise }) => {
+import Player from "../Player/player";
+
+const AvailablePlayer = ({ playerPromise, setBalance }) => {
   const playerData = use(playerPromise);
   //  console.log(playerData);
 
   return (
     <div className="grid grid-cols-3 gap-7  max-w-[1280px] mx-auto mt-6">
-    { 
-        playerData.map(player=>{
-            return (
-              <div
-                key={player.rating}
-                className="card bg-base-100 w-96 shadow-sm p-4"
-              >
-                <figure>
-                  <img
-                    className="h-[350px] object-cover rounded-2xl"
-                    src={player.image}
-                    alt="Imageof Player"
-                  />
-                </figure>
-                <div className="">
-                  <div className="flex my-3 items-center">
-                    <img src={profileImg} alt="" />
-                    <h2 className="card-title ml-2 font-bold">{player.name}</h2>
-                  </div>
-
-                  <div className="flex justify-between items-center border-b-1 border-b-gray-400 pb-4">
-                    <div className="flex items-center">
-                      <img
-                        className=" h-[20px] mr-1 "
-                        src={CountryFlagImg}
-                        alt=""
-                      />
-                      <span>{player.country}</span>
-                    </div>
-                    <button className="btn">{player.role}</button>
-                  </div>
-
-                  <h1 className="font-extrabold text-green-600">
-                    Rating: {player.rating}
-                  </h1>
-                  <div className="flex justify-between  items-center my-3">
-                    <h1 className="font-bold"> {player.battingStyle}</h1>
-                    <h1 className="font-bold"> {player.bowlingStyle}t</h1>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <h1 className="font-bold">Price:{player.price}</h1>
-                    <button className="btn"> Choose Player</button>
-                  </div>
-                </div>
-              </div>
-            );
-        })
-    }
+      {playerData.map((player) => {
+        return (
+          <Player key={player.rating} player={player} setBalance={setBalance}>
+            {" "}
+          </Player>
+        );
+      })}
       {/* <div className="card bg-base-100 w-96 shadow-sm p-4">
         <figure>
           <img
