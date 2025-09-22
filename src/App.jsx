@@ -1,18 +1,18 @@
-import { Suspense, useState } from 'react'
-import './App.css'
+import { Suspense, useState } from "react";
+import "./App.css";
 
-import Navbar from './Components/navbar/Navbar';
-import AvailablePlayer from './Components/AvailablePlayer/AvailablePlayer';
-import SlectedPlayer from './Components/SelectedPlayer/SlectedPlayer';
-const playerLoad= async ()=>{
-  const res= await fetch("/Players.json")
-  return res.json()
-}
-const playerPromise=playerLoad()
+import Navbar from "./Components/navbar/Navbar";
+import AvailablePlayer from "./Components/AvailablePlayer/AvailablePlayer";
+import SlectedPlayer from "./Components/SelectedPlayer/SlectedPlayer";
+const playerLoad = async () => {
+  const res = await fetch("/Players.json");
+  return res.json();
+};
+const playerPromise = playerLoad();
 
 function App() {
-const [selectToggole, SetToggole]=useState(true)
-const [availableBanlance, setBalance]=useState(100000)
+  const [selectToggole, SetToggole] = useState(true);
+  const [availableBanlance, setBalance] = useState(600000);
   return (
     <>
       <Navbar availableBanlance={availableBanlance}></Navbar>
@@ -56,4 +56,4 @@ const [availableBanlance, setBalance]=useState(100000)
   );
 }
 
-export default App
+export default App;

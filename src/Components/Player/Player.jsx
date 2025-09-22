@@ -9,14 +9,15 @@ const Player = ({ player, setBalance }) => {
       player.price.split("USD").join().split(",").join("")
     );
 
-    console.log(playerPrice);
-    setisSelected(true);
+    // console.log(playerPrice);
+   
     setBalance((prev) => {
       if (prev < playerPrice) {
         alert("Insuffsiunt Balance");
-
+          // console.log(prev)
         return prev;
       } else {
+         setisSelected(true);
         return prev - playerPrice;
       }
     });
@@ -58,7 +59,7 @@ const Player = ({ player, setBalance }) => {
             className="btn"
             onClick={handleChoseplayerButton}
           >
-            {" "}
+            
             {isSelected ? "Selected" : "ChoosePlayer"}
           </button>
         </div>
