@@ -26,7 +26,11 @@ setBalance(prev=> prev+parseInt(
       <Navbar availableBanlance={availableBanlance}></Navbar>
       {/* Availabe button and slect on availabe toggole here */}
       <div className="flex justify-between items-center max-w-[1280px] mx-auto">
-        <h1 className="font-extrabold text-2xl">Available Players</h1>
+        <h1 className="font-extrabold text-2xl">
+          {selectToggole
+            ? "Available Players"
+            : `Selected Players ${selectedPlayer.length}/6 `}
+        </h1>
         <div>
           <button
             onClick={() => SetToggole(true)}
@@ -34,7 +38,7 @@ setBalance(prev=> prev+parseInt(
               selectToggole === true ? "bg-[#E7FE29]" : ""
             }`}
           >
-            Aailabe
+            Availabe
           </button>
           <button
             onClick={() => SetToggole(false)}
