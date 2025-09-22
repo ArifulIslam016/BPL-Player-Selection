@@ -1,8 +1,11 @@
 import React from "react";
 
-const SelectedPlayerCard = ({ brought }) => {
+const SelectedPlayerCard = ({ brought, removePlayer }) => {
+    const handleRemovePlayer=()=>{
+removePlayer(brought)
+    }
   return (
-    <div className="max-w-[1280px] mx-auto p-10">
+    <div key={brought.rating} className="max-w-[1280px] mx-auto p-10">
       <div className="flex justify-between items-center rounded-2xl border-2 border-gray-500 p-4 ">
         <div className="flex items-center ">
           <img
@@ -15,7 +18,11 @@ const SelectedPlayerCard = ({ brought }) => {
             <h4 className="text-sm">{brought.role} </h4>
           </div>
         </div>
-        <img src="https://i.ibb.co.com/DgTbrXkC/Frame.png" alt="" />
+        <img
+          onClick={handleRemovePlayer}
+          src="https://i.ibb.co.com/DgTbrXkC/Frame.png"
+          alt=""
+        />
       </div>
     </div>
   );

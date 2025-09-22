@@ -14,7 +14,12 @@ function App() {
   const [selectToggole, SetToggole] = useState(true);
   const [availableBanlance, setBalance] = useState(600000);
   const [selectedPlayer, setSelectedPlayer]=useState([])
-  // console.log(selectedPlayer);
+ const removePlayer=(player)=>{
+const leftSelectedPlayer=selectedPlayer.filter(p=> p.name!==player.name)
+setSelectedPlayer(leftSelectedPlayer)
+setBalance(prev=> prev+parseInt(
+      player.price.split("USD").join().split(",").join("")))
+ }
   
   return (
     <>
@@ -44,7 +49,9 @@ function App() {
       {selectToggole ? (
         <Suspense
           fallback={
-            <span className="loading loading-spinner text-error text-center "></span>
+            <div className="max-w-[1280px] mx-auto text-center mt-40">
+              <span className="loading loading-spinner text-error text-center w-[300px] mx-auto "></span>
+            </div>
           }
         >
           <AvailablePlayer
@@ -54,7 +61,10 @@ function App() {
           ></AvailablePlayer>
         </Suspense>
       ) : (
-        <SlectedPlayer selectedPlayer={selectedPlayer}></SlectedPlayer>
+        <SlectedPlayer
+          selectedPlayer={selectedPlayer}
+          removePlayer={removePlayer}
+        ></SlectedPlayer>
       )}
     </>
   );
