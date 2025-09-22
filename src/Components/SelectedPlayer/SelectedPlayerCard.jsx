@@ -1,9 +1,9 @@
 import React from "react";
 
-const SelectedPlayerCard = ({ brought, removePlayer }) => {
-    const handleRemovePlayer=()=>{
-removePlayer(brought)
-    }
+const SelectedPlayerCard = ({ brought, removePlayer,}) => {
+  const handleRemovePlayer = () => {
+    removePlayer(brought);
+  };
   return (
     <div key={brought.rating} className="max-w-[1280px] mx-auto p-10">
       <div className="flex justify-between items-center rounded-2xl border-2 border-gray-500 p-4 ">

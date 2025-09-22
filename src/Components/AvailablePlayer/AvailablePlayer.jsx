@@ -2,8 +2,17 @@ import React, { use } from "react";
 
 import Player from "../Player/player";
 
-const AvailablePlayer = ({ playerPromise, setBalance, setSelectedPlayer }) => {
+const AvailablePlayer = ({
+  playerPromise,
+  setBalance,
+  setSelectedPlayer,
+  selectedPlayer,
+  availableBanlance
+  // isSelected,
+  // setisSelected
+}) => {
   const playerData = use(playerPromise);
+
   //  console.log(playerData);
 
   return (
@@ -15,6 +24,10 @@ const AvailablePlayer = ({ playerPromise, setBalance, setSelectedPlayer }) => {
             player={player}
             setBalance={setBalance}
             setSelectedPlayer={setSelectedPlayer}
+            selectedPlayer={selectedPlayer}
+            availableBanlance={availableBanlance}
+            // isSelected={isSelected}
+            // setisSelected={setisSelected}
           >
             {" "}
           </Player>

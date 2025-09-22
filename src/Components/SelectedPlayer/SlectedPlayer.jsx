@@ -1,7 +1,12 @@
 import React from 'react';
 import SelectedPlayerCard from './SelectedPlayerCard';
 
-const SlectedPlayer = ({ selectedPlayer, removePlayer }) => {
+const SlectedPlayer = ({
+  selectedPlayer,
+  removePlayer,
+  isSelected,
+  setisSelected,
+}) => {
   // console.log(selectedPlayer);
 
   return (
@@ -10,6 +15,8 @@ const SlectedPlayer = ({ selectedPlayer, removePlayer }) => {
         <SelectedPlayerCard
           brought={brought}
           removePlayer={removePlayer}
+          isSelected={isSelected}
+          setisSelected={setisSelected}
         ></SelectedPlayerCard>
       ))}
     </div>

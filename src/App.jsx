@@ -1,6 +1,6 @@
 import { Suspense, useState } from "react";
 import "./App.css";
-
+import { ToastContainer } from "react-toastify";
 import Navbar from "./Components/navbar/Navbar";
 import AvailablePlayer from "./Components/AvailablePlayer/AvailablePlayer";
 import SlectedPlayer from "./Components/SelectedPlayer/SlectedPlayer";
@@ -11,8 +11,9 @@ const playerLoad = async () => {
 const playerPromise = playerLoad();
 
 function App() {
+  // const [isSelected, setisSelected] = useState(false);
   const [selectToggole, SetToggole] = useState(true);
-  const [availableBanlance, setBalance] = useState(600000);
+  const [availableBanlance, setBalance] = useState(1000000);
   const [selectedPlayer, setSelectedPlayer]=useState([])
  const removePlayer=(player)=>{
 const leftSelectedPlayer=selectedPlayer.filter(p=> p.name!==player.name)
@@ -62,6 +63,10 @@ setBalance(prev=> prev+parseInt(
             playerPromise={playerPromise}
             setBalance={setBalance}
             setSelectedPlayer={setSelectedPlayer}
+            selectedPlayer={selectedPlayer}
+            availableBanlance={availableBanlance}
+            // isSelected={isSelected}
+            // setisSelected={setisSelected}
           ></AvailablePlayer>
         </Suspense>
       ) : (
@@ -70,6 +75,7 @@ setBalance(prev=> prev+parseInt(
           removePlayer={removePlayer}
         ></SlectedPlayer>
       )}
+      <ToastContainer> </ToastContainer>
     </>
   );
 }
