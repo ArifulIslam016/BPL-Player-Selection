@@ -2,7 +2,7 @@ import React, { use } from "react";
 
 import Player from "../Player/player";
 
-const AvailablePlayer = ({ playerPromise, setBalance }) => {
+const AvailablePlayer = ({ playerPromise, setBalance, setSelectedPlayer }) => {
   const playerData = use(playerPromise);
   //  console.log(playerData);
 
@@ -10,7 +10,12 @@ const AvailablePlayer = ({ playerPromise, setBalance }) => {
     <div className="grid grid-cols-3 gap-7  max-w-[1280px] mx-auto mt-6">
       {playerData.map((player) => {
         return (
-          <Player key={player.rating} player={player} setBalance={setBalance}>
+          <Player
+            key={player.rating}
+            player={player}
+            setBalance={setBalance}
+            setSelectedPlayer={setSelectedPlayer}
+          >
             {" "}
           </Player>
         );

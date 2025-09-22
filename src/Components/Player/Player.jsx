@@ -2,25 +2,26 @@ import React, { useState } from "react";
 import profileImg from "../../assets/profile.png";
 import CountryFlagImg from "../../assets/CountryFlag.png";
 
-const Player = ({ player, setBalance }) => {
+const Player = ({ player, setBalance, setSelectedPlayer }) => {
   const [isSelected, setisSelected] = useState(false);
   const handleChoseplayerButton = () => {
     const playerPrice = parseInt(
       player.price.split("USD").join().split(",").join("")
     );
-
-    // console.log(playerPrice);
-   
-    setBalance((prev) => {
+       setBalance((prev) => {
       if (prev < playerPrice) {
         alert("Insuffsiunt Balance");
-          // console.log(prev)
+        // console.log(prev)
         return prev;
-      } else {
-         setisSelected(true);
+      } 
+      else {
+          setisSelected(true)
         return prev - playerPrice;
       }
+      
     });
+  
+    setSelectedPlayer(prev=> [...prev, player])
   };
   return (
     <div className="card bg-base-100 w-96 shadow-sm p-4">
@@ -59,7 +60,6 @@ const Player = ({ player, setBalance }) => {
             className="btn"
             onClick={handleChoseplayerButton}
           >
-            
             {isSelected ? "Selected" : "ChoosePlayer"}
           </button>
         </div>

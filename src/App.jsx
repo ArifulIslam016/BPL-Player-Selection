@@ -13,6 +13,9 @@ const playerPromise = playerLoad();
 function App() {
   const [selectToggole, SetToggole] = useState(true);
   const [availableBanlance, setBalance] = useState(600000);
+  const [selectedPlayer, setSelectedPlayer]=useState([])
+  // console.log(selectedPlayer);
+  
   return (
     <>
       <Navbar availableBanlance={availableBanlance}></Navbar>
@@ -47,10 +50,11 @@ function App() {
           <AvailablePlayer
             playerPromise={playerPromise}
             setBalance={setBalance}
+            setSelectedPlayer={setSelectedPlayer}
           ></AvailablePlayer>
         </Suspense>
       ) : (
-        <SlectedPlayer></SlectedPlayer>
+        <SlectedPlayer selectedPlayer={selectedPlayer}></SlectedPlayer>
       )}
     </>
   );
