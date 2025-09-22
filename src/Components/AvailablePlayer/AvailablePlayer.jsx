@@ -8,6 +8,7 @@ const AvailablePlayer = ({
   setSelectedPlayer,
   selectedPlayer,
   availableBanlance
+  
   // isSelected,
   // setisSelected
 }) => {

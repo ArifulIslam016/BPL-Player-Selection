@@ -5,7 +5,7 @@ const SlectedPlayer = ({
   selectedPlayer,
   removePlayer,
   isSelected,
-  setisSelected,
+  setisSelected,SetToggole
 }) => {
   // console.log(selectedPlayer);
 
@@ -19,6 +19,14 @@ const SlectedPlayer = ({
           setisSelected={setisSelected}
         ></SelectedPlayerCard>
       ))}
+      <button
+        className="py-3 px-4 font-bold border-1
+rounded-2xl
+bg-[#E7FE29]"
+        onClick={() => SetToggole(true)}
+      >
+        Add More Players
+      </button>
     </div>
   );
 };

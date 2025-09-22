@@ -73,8 +73,10 @@ setBalance(prev=> prev+parseInt(
         <SlectedPlayer
           selectedPlayer={selectedPlayer}
           removePlayer={removePlayer}
+          SetToggole={SetToggole}
         ></SlectedPlayer>
       )}
+
       <ToastContainer> </ToastContainer>
     </>
   );
